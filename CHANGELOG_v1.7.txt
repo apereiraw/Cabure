@@ -1,0 +1,4 @@
+GMD Caburé v1.7
+- Próxima etapa do desenvolvimento.
+- Base para módulo de pesagens.
+- Planejado: tela Nova Pesagem, histórico, GMD.

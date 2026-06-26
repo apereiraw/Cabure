@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GMD Caburé</title>
+
+<meta name="theme-color" content="#1B5E20">
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mobile.css">
+
+<link rel="icon" href="assets/logo.png">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <h1>🐂 GMD Caburé</h1>
+        <span>Controle de Confinamento</span>
+
+    </div>
+
+</header>
+
+
+<main id="app">
+
+<section class="dashboard">
+
+<div class="card resumo">
+
+<h2>Dashboard</h2>
+
+<label><b>Data de Referência</b></label><input id="dataRef" type="date" style="margin:10px 0;padding:8px;width:100%"><div class="cards">
+
+<div class="mini-card">
+
+<span>Lotes Ativos</span>
+
+<strong id="totalLotes">0</strong>
+
+</div>
+
+<div class="mini-card">
+
+<span>Animais</span>
+
+<strong id="totalAnimais">0</strong>
+
+</div>
+
+<div class="mini-card">
+
+<span>Peso Médio</span>
+
+<strong id="pesoMedio">--</strong>
+
+</div>
+
+<div class="mini-card">
+
+<span>GMD Médio</span>
+
+<strong id="gmdMedio">--</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="acoes">
+
+<button id="novoLote">
+
+➕ Novo Lote
+
+</button>
+
+</section>
+
+
+
+<section class="lista-lotes">
+
+<h2>Lotes</h2>
+
+<div id="listaLotes">
+
+<p>Nenhum lote cadastrado.</p>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<div id="modalLote" class="modal"><div class="modal-box"><h2>Novo Lote</h2><input id="loteNome" placeholder="Nome do lote"><div class="modal-buttons"><button id="cancelarLote" class="btn btn-excluir">Cancelar</button><button id="salvarLote" class="btn btn-abrir">Salvar</button></div></div></div>
+<section id="loteView" style="display:none">
+<div class="card">
+<h2 id="tituloLote">Lote</h2>
+<button id="voltarDashboard" class="btn btn-editar">← Voltar</button>
+<div class="cards">
+<div class="mini-card"><span>Animais</span><strong id="qtAnimaisLote">0</strong></div>
+</div>
+<button id="btnNovoAnimal" class="btn btn-abrir" style="margin-top:15px;">➕ Adicionar Animal</button>
+<div id="listaAnimais" style="margin-top:15px;"></div>
+</div>
+</section>
+
+
+<div id="modalAnimal" class="modal">
+<div class="modal-box">
+<h2>🐂 Novo Animal</h2>
+<label>Brinco</label><input id="aniBrinco">
+<label>Peso (kg)</label><input id="aniPeso" type="number">
+<label>Sexo</label>
+<select id="aniSexo"><option>Macho</option><option>Fêmea</option></select>
+<label>Observações</label><textarea id="aniObs"></textarea>
+<div class="modal-buttons"><button id="cancelarAnimal" class="btn btn-excluir">Cancelar</button><button id="salvarAnimal" class="btn btn-abrir">Salvar</button></div>
+</div></div>
+
+<nav class="bottom-menu">
+
+<button>
+
+🏠
+
+<span>Início</span>
+
+</button>
+
+<button>
+
+📦
+
+<span>Lotes</span>
+
+</button>
+
+<button>
+
+⚖️
+
+<span>Pesagem</span>
+
+</button>
+
+<button>
+
+📊
+
+<span>Relatórios</span>
+
+</button>
+
+</nav>
+
+
+
+<script src="storage.js"></script>
+<script src="app.js"></script>
+
+<script>
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js');
+}
+
+</script>
+
+</body>
+</html>

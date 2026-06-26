@@ -1,0 +1,4 @@
+GMD Cabure v0.4
+- Base oficial preservada
+- Preparada para tela do lote
+- Próxima etapa: cadastro de animais

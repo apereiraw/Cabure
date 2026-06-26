@@ -1,0 +1,5 @@
+v1.0 planned changes:
+- Modal cadastro animal
+- Data de referência fixa
+- Sexo
+- Cards detalhados

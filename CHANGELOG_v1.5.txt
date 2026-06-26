@@ -1,0 +1,7 @@
+GMD Cabure v1.5
+
+Planejado:
+- Modal de cadastro de animais
+- Busca por brinco
+- Editar e excluir animal
+- Estrutura para histórico de pesagens
